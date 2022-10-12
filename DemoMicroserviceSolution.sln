@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{5E3F503E-19CC-4521-A201-6CCB5A0CE8A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerWebApi", "CustomerWebApi\CustomerWebApi.csproj", "{99144FA0-6233-4BD2-B15D-2960A5A0DF0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99144FA0-6233-4BD2-B15D-2960A5A0DF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99144FA0-6233-4BD2-B15D-2960A5A0DF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99144FA0-6233-4BD2-B15D-2960A5A0DF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99144FA0-6233-4BD2-B15D-2960A5A0DF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99144FA0-6233-4BD2-B15D-2960A5A0DF0A} = {5E3F503E-19CC-4521-A201-6CCB5A0CE8A2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E1DB97B-619D-45AC-94BA-C07F62D3C18D}
+	EndGlobalSection
+EndGlobal
