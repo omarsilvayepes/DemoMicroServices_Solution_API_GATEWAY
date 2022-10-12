@@ -15,6 +15,6 @@ namespace CustomerWebApi.Models
         [Column("mobile_no")]
         public string? MobileNumber { get; set; }
         [Column("email")]
-        public string? Email { get; set; }
+        public string? Email { get; set; }//? -> this symbol indicates that values null are allow
     }
 }

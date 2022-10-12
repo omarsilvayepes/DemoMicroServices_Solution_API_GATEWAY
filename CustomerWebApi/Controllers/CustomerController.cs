@@ -40,7 +40,7 @@ namespace CustomerWebApi.Controllers
             return Ok("Update Sucessfully");
         }
 
-        [HttpDelete("{customer:int}")]
+        [HttpDelete("{customerId:int}")]
         public async Task<ActionResult> DeleteCustomerAsync(int customerId)
         {
             var customer = await _customerDbContext.Customers.FindAsync(customerId);
