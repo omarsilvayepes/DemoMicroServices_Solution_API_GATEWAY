@@ -42,9 +42,9 @@ namespace ProductWebApi.Controllers
         }
 
         [HttpDelete("{productId:int}")]
-        public async Task<ActionResult> DeleteProductAsync(int product_Id)
+        public async Task<ActionResult> DeleteProductAsync(int productId)
         {
-            var product = await _dbContext.Products.FindAsync(product_Id);
+            var product = await _dbContext.Products.FindAsync(productId);
             _dbContext.Products.Remove(product);
             await _dbContext.SaveChangesAsync();
             return Ok("Delete Succesfully");
