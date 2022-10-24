@@ -14,6 +14,15 @@ services:
       - backend
     ports:
       - 8001:1433 
+  productdb:
+    container_name: product-db
+    image: mysql:8.0.31-oracle
+    environment:
+     - MYSQL_ROOT_PASSWORD=password@123#
+    ports:
+     - 8003:3306
+    networks:
+     - backend
 
   customerwebapi:
     container_name: customer-api
@@ -29,3 +38,31 @@ services:
      - DB_HOST=customerdb
      - DB_NAME=customer
      - DB_SA_PASSWORD=password@12345#
+  productwebapi:
+    container_name: product-api
+    image: ${DOCKER_REGISTRY-}productwebapi
+    build:
+      context: .
+      dockerfile: ProductWebApi/Dockerfile
+    networks:
+     - backend
+    ports:
+     - 8004:80
+    environment:
+     - DB_HOST=productdb
+     - DB_NAME=product
+     - DB_ROOT_PASSWORD=password@123#
+
+
+  apigateway:
+    container_name: api-gateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    ports:
+     - 8005:80
+    networks:
+     - backend
+
+

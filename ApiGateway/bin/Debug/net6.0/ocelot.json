@@ -9,8 +9,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5214
+          "Host": "customerwebapi",
+          "Port": 80
         }
       ],
       "DownstreamPathTemplate": "/api/Customer"
@@ -23,8 +23,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5214
+          "Host": "customerwebapi",
+          "Port": 80
         }
       ],
       "DownstreamPathTemplate": "/api/Customer/{customerId}"
@@ -38,8 +38,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5278
+          "Host": "productwebapi",
+          "Port": 80
         }
       ],
       "DownstreamPathTemplate": "/api/Product"
@@ -52,14 +52,14 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5278
+          "Host": "productwebapi",
+          "Port": 80
         }
       ],
       "DownstreamPathTemplate": "/api/Product/{productId}"
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5245"// ????
+    "BaseUrl": "http://localhost:800"// ????
   }
 }

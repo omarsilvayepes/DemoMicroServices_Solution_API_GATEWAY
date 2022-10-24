@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ax/jqZWzClzrs0QR9Y5b9JkYm2s/ySj3mhZEFdB7GeNEZADiL//TaJKkXWVUOkfPA44Kg1BS4bh2IFelRtznQQ==",
+  "dgSpecHash": "zYYf8NIbdIHqC70lbHk81JREuEG82INFYi/bTbY9QLWRWKC+WFPjaumhKEgXxPQ0D3gjczBhn48wSFgM6CSafQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\omary\\OneDrive\\Escritorio\\LearningDEV\\DemoMicroserviceSolution\\ProductWebApi\\ProductWebApi.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\omary\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\omary\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\omary\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\omary\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
     "C:\\Users\\omary\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\omary\\.nuget\\packages\\mysql.data\\8.0.31\\mysql.data.8.0.31.nupkg.sha512",
     "C:\\Users\\omary\\.nuget\\packages\\mysql.entityframeworkcore\\6.0.7\\mysql.entityframeworkcore.6.0.7.nupkg.sha512",

@@ -1,0 +1,73 @@
+networks:
+  backend: {}
+services:
+  apigateway:
+    build:
+      context: C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution
+      dockerfile: ApiGateway/Dockerfile
+    container_name: api-gateway
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: apigateway
+    networks:
+      backend: {}
+    ports:
+    - published: 8005
+      target: 80
+    - target: 80
+  customerdb:
+    container_name: customer-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      backend: {}
+    ports:
+    - published: 8001
+      target: 1433
+  customerwebapi:
+    build:
+      context: C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution
+      dockerfile: CustomerWebApi/Dockerfile
+    container_name: customer-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DB_HOST: customerdb
+      DB_NAME: customer
+      DB_SA_PASSWORD: password@12345#
+    image: customerwebapi
+    networks:
+      backend: {}
+    ports:
+    - published: 8002
+      target: 80
+    - target: 80
+  productdb:
+    container_name: product-db
+    environment:
+      MYSQL_ROOT_PASSWORD: password@123#
+    image: mysql:8.0.31-oracle
+    networks:
+      backend: {}
+    ports:
+    - published: 8003
+      target: 3306
+  productwebapi:
+    build:
+      context: C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution
+      dockerfile: ProductWebApi/Dockerfile
+    container_name: product-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DB_HOST: productdb
+      DB_NAME: product
+      DB_ROOT_PASSWORD: password@123#
+    image: productwebapi
+    networks:
+      backend: {}
+    ports:
+    - published: 8004
+      target: 80
+    - target: 80
+version: '3.4'
