@@ -1,0 +1,12 @@
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\bin\Debug\net6.0\JwtAuthenticationManger.deps.json
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\bin\Debug\net6.0\JwtAuthenticationManger.dll
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\bin\Debug\net6.0\JwtAuthenticationManger.pdb
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\JwtAuthenticationManger.csproj.AssemblyReference.cache
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\JwtAuthenticationManger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\JwtAuthenticationManger.AssemblyInfoInputs.cache
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\JwtAuthenticationManger.AssemblyInfo.cs
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\JwtAuthenticationManger.csproj.CoreCompileInputs.cache
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\JwtAuthenticationManger.dll
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\refint\JwtAuthenticationManger.dll
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\JwtAuthenticationManger.pdb
+C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution\JwtAuthenticationManger\obj\Debug\net6.0\ref\JwtAuthenticationManger.dll
