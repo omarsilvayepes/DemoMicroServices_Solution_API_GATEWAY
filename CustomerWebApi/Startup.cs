@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using JwtAuthenticationManger;
+using Microsoft.EntityFrameworkCore;
 
 namespace CustomerWebApi
 {
@@ -14,6 +15,10 @@ namespace CustomerWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            /*Dependency Injection for Authentication Process*/
+
+            services.addCustomJwtAutjentication();
 
             /* Database Context Dependency Injection */
 
@@ -38,6 +43,7 @@ namespace CustomerWebApi
             }
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {

@@ -1,5 +1,19 @@
 {
   "Routes": [
+    // Authentication Web API
+    {
+      "UpstreamPathTemplate": "/api/Account",
+      "UpstreamHttpMethod": [ "Post" ],
+
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authenticationwebapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Account"
+    },
     //Customer Web API
     {
       //route 1
@@ -13,7 +27,18 @@
           "Port": 80
         }
       ],
-      "DownstreamPathTemplate": "/api/Customer"
+      "DownstreamPathTemplate": "/api/Customer",
+
+      //Rate Limit Option ex: 1 request per 60 seconds
+      "RateLimitOptions": {
+        "ClientWhiteList": [],
+        "EnableRateLimiting": true,
+        "Period": "60s",
+        "PeriodTimespan": 60,
+        "Limit": 1
+      }
+
+
     },
     {
       //route 2
@@ -42,7 +67,18 @@
           "Port": 80
         }
       ],
-      "DownstreamPathTemplate": "/api/Product"
+
+      //Authentication 
+      "DownstreamPathTemplate": "/api/Product",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      // Authorization
+      "RouteClaimsRequirement": {
+        "Role": "Administrator"
+      }
+
     },
     {
       //route 2
@@ -60,6 +96,11 @@
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:800"// ????
+    "BaseUrl": "http://localhost:800" ,// ????
+    //Rate Limit Option Customize Message Response
+    "RateLimitOptions": {
+      "QuotaExceededMessage": "Request Not Allowed",
+      "HttpStatusCode": 909
+    }
   }
 }

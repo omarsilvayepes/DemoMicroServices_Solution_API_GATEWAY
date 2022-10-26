@@ -15,6 +15,18 @@ services:
     - published: 8005
       target: 80
     - target: 80
+  authenticationwebapi:
+    build:
+      context: C:\Users\omary\OneDrive\Escritorio\LearningDEV\DemoMicroserviceSolution
+      dockerfile: AuthenticationWebApi/Dockerfile
+    container_name: authentication-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: authenticationwebapi
+    networks:
+      backend: {}
+    ports:
+    - target: 80
   customerdb:
     container_name: customer-db
     environment:

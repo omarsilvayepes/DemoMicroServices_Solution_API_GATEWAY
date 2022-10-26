@@ -1,3 +1,4 @@
+using JwtAuthenticationManger;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -9,6 +10,14 @@ builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)
 
 builder.Services.AddOcelot(builder.Configuration);
 
+/* Dependency injection for authentication Process*/
+
+builder.Services.addCustomJwtAutjentication();
+
 var app = builder.Build();
 await app.UseOcelot();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.Run();

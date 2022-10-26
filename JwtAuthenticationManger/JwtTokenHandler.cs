@@ -8,13 +8,13 @@ namespace JwtAuthenticationManger
 {
     public class JwtTokenHandler
     {
-        public const string JWT_SECURITY_KEY = "";
+        public const string JWT_SECURITY_KEY = "SDFFJNGJGNJ55jnj55jn55";
         private const int JWT_TOKEN_VALIDITY_MIN = 20;
         private readonly List<UserAccount> _userAccounts;
 
         public JwtTokenHandler()
         {
-            _userAccounts = new List<UserAccount>
+            _userAccounts = new List<UserAccount> // Best Option save en Database
             {
                 new UserAccount{Name="admin",Password="admin",Role="Administrator"},
                 new UserAccount{Name="user01",Password="user01",Role="User"}
@@ -34,7 +34,8 @@ namespace JwtAuthenticationManger
             var claimsIdentity = new ClaimsIdentity(new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Name,authenticationRequest.UserName),
-                new Claim(ClaimTypes.Role,userAccount.Role)
+                //new Claim(ClaimTypes.Role,userAccount.Role) -> for authorization for each microservice only
+                new Claim("Role",userAccount.Role)// -> for authorization usign API gateway only
             });
 
             var signingCredentials = new SigningCredentials(
